@@ -149,11 +149,11 @@ app.layout = html.Div(
         dbc.Row(
             [
                 html.H5('Últimos Projetos', id='id_titulo_feed'),
-                dbc.Col(primeiro_cartao, md=3, className='class_cor_fundo'),
-                dbc.Col(segundo_cartao, md=3, className='class_cor_fundo'),
-                dbc.Col(terceiro_cartao, md=3, className='class_cor_fundo'),
-                dbc.Col(quarto_cartao, md=3, className='class_cor_fundo'),
-            ], id='id_linha_feed'
+                dbc.Col(primeiro_cartao, md=3, ),
+                dbc.Col(segundo_cartao, md=3,),
+                dbc.Col(terceiro_cartao, md=3, ),
+                dbc.Col(quarto_cartao, md=3,),
+            ],
         )
     ]
 )
