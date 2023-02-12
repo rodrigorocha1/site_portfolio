@@ -2,3 +2,11 @@
     background-color: #000000;
     color: white;
 }
+
+.class_navbar {
+    color: #FD6C03;
+}
+
+#id_navbar_main .navbar-brand {
+    color: #FD6C03;
+}
