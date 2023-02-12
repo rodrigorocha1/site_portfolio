@@ -20,7 +20,8 @@ app.layout = html.Div(
                                 html.H4('Sobre Mim',
                                         className='card-title',
                                         id='id_title'),
-                                html.P('Hoje trabalho com Pentaho data Integration, SQL (Consulta Simples No Banco de dados)'
+                                html.P('Hoje trabalho com Pentaho data Integration,'
+                                       ' SQL (Consulta Simples No Banco de dados)'
                                        ' Consumo de API (REST E SOAP)',
                                        className='class_paragrafo',
                                        id='id_paragrafo_um'),
@@ -55,7 +56,79 @@ app.layout = html.Div(
                                 html.H4(
                                     'Habilidades',
                                     className='class_cor_fundo'
-                                )
+                                ),
+                                html.Div(
+                                    html.Ul(
+                                        children=[
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                                                        className='class_lista_imagens',
+                                                        alt='Python',
+                                                        id='id_img_python'
+                                                    ),
+                                                    ' PYTHON'
+                                                ], id='id_lista_python'
+                                            ),
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG/Power-BI.png',
+                                                        alt='Power BI',
+                                                        className='class_lista_imagens',
+                                                        id='id_img_power_bi'
+                                                    ),
+                                                    ' POWER BI'
+                                                ], id='id_lista_power_bi'
+                                            ),
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://yt3.ggpht.com/ytc/AMLnZu-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k-c0x00ffffff-no-rj',
+                                                        alt='Pentaho',
+                                                        className='class_lista_imagens',
+                                                        id='id_img_pentaho'
+                                                    ),
+                                                    ' PENTAHO'
+                                                ], id='id_lista_pentaho'
+                                            ),
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://www.freeiconspng.com/uploads/sql-server-icon-png-8.png',
+                                                        alt='sql server',
+                                                        className='class_lista_imagens',
+                                                        id='id_img_sql_server'
+                                                    ),
+                                                    ' SQL SERVER'
+                                                ], id='id_lista_sql_server'
+                                            ),
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+                                                        alt='Oracle',
+                                                        className='class_lista_imagens',
+                                                        id='id_img_oracle'
+                                                    ),
+                                                    ' ORACLE'
+                                                ], id='id_lista_oracle_'
+                                            ),
+                                            html.Li(
+                                                [
+                                                    html.Img(
+                                                        src='https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg',
+                                                        alt='Dash',
+                                                        className='class_lista_imagens',
+                                                        id='id_img_dash'
+                                                    ),
+                                                    ' DASH'
+                                                ], id='id_lista_dash'
+                                            ),
+                                        ]
+                                    )
+                                ),
                             ],
                             className='class_coluna_info'
                         )

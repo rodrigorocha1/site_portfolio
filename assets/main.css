@@ -1,6 +1,7 @@
 * {
     background-color: #000000;
     color: white;
+    text-align: justify;
 }
 
 .class_navbar {
@@ -19,7 +20,7 @@
 }
 
 .class_coluna_info {
-    background-color: #1D1D1D;
+    background-color: #1D1D1D
 }
 
 .class_cor_fundo {
@@ -33,6 +34,7 @@ p {
 
 h4 {
     text-align: center;
+    color: #FD6C03;
 }
 
 p.class_paragrafo {
@@ -49,4 +51,20 @@ p.class_paragrafo {
 
 .id_link {
     text-align: justify;
+}
+
+li,
+ul {
+    background-color: #1D1D1D;
+    margin-top: 10px;
+}
+
+.class_lista_imagens {
+    height: 40px;
+    width: 40px;
+    background-color: #1D1D1D;
+}
+
+ul {
+    columns: 2;
 }
