@@ -6,31 +6,13 @@ barra_principal = [
         children=[
             dbc.NavItem(
                 dbc.NavLink(
-                    'pg1',
+                    'Ínicio',
                     className='class_navbar'
                 )
             ),
             dbc.NavItem(
                 dbc.NavLink(
-                    'pg2',
-                    className='class_navbar'
-                )
-            ),
-            dbc.NavItem(
-                dbc.NavLink(
-                    'pg3',
-                    className='class_navbar'
-                )
-            ),
-            dbc.NavItem(
-                dbc.NavLink(
-                    'pg4',
-                    className='class_navbar'
-                )
-            ),
-            dbc.NavItem(
-                dbc.NavLink(
-                    'pg5',
+                    'Projetos',
                     className='class_navbar'
                 )
             )

@@ -8,12 +8,26 @@ content = html.Div(id='id_page_content')
 app.layout = html.Div(
     [
         dbc.Row(
-            barra_principal
+            barra_principal,
+            id='id_linha_principal_um'
         ),
         dbc.Row(
             [
-                dbc.Col('Primeira Coluna', md=6),
-                dbc.Col('Segunda Coluna', md=6)
+                dbc.Col(
+                    'Primeira Coluna',
+                    md=4,
+                    className='class_coluna_info'
+                ),
+                dbc.Col(
+                    'Minhas Habilidades',
+                    md=4,
+                    className='class_coluna_info'
+                ),
+                dbc.Col(
+                    'Minhas Habilidades',
+                    md=4,
+                    className='class_coluna_info'
+                )
             ]
         )
     ]
