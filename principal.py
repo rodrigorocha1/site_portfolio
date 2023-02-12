@@ -14,7 +14,7 @@ app.layout = html.Div(
                         dbc.NavItem(dbc.NavLink('pg1', href='#')),
                         dbc.NavItem(dbc.NavLink('pg2'))
                     ],
-                    color='black',
+                    color='write',
                     brand='NavbarSimple',
                     dark=True
                 ),
