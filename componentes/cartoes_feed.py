@@ -6,7 +6,7 @@ primeiro_cartao = dbc.Card(
         [
             html.H4('Pokedex Primeira Versão - Python',
                     className='card-title',
-                    id='id_title_feed'),
+                    id='id_title_feed_pokedex'),
             dbc.Button('Clique Aqui',
                        className='class_btn_feed',
                        id='id_btn_pokedex')
@@ -20,7 +20,7 @@ segundo_cartao = dbc.Card(
         [
             html.H4('Eleições 2022-Versão Power BI',
                     className='card-title',
-                    id='id_title_feed'),
+                    id='id_title_feed_el_2022'),
             dbc.Button('Clique Aqui',
                        className='class_btn_feed',
                        id='id_btn_eli')
@@ -34,7 +34,7 @@ terceiro_cartao = dbc.Card(
         [
             html.H4('Aplicativo Previsão Tempo',
                     className='card-title',
-                    id='id_title_feed'),
+                    id='id_title_feed_pv'),
             dbc.Button('Clique Aqui',
                        className='class_btn_feed',
                        id='id_btn_tempo')
@@ -51,7 +51,7 @@ quarto_cartao = dbc.Card(
                     id='id_title_feed'),
             dbc.Button('Clique Aqui',
                        className='class_btn_feed',
-                       id='id_btn_tempo'
+                       id='id_btn_feedd'
                        )
         ],
         className='class_coluna_info'

@@ -85,7 +85,14 @@ ul {
     font-size: 20px;
 }
 
-#class_btn_feed {
-
-    margin: 0 auto;
+#id_img_contatos {
+    background-color: #1E2747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#id_img_git {
+    margin-right: 10px;
+}
+

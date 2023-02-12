@@ -136,8 +136,39 @@ app.layout = html.Div(
                                                 ], id='id_lista_dash'
                                             ),
                                         ]
-                                    )
+                                    ),
+
                                 ),
+                                html.H4(
+                                    'Contatos',
+                                    className='class_cor_fundo'
+                                ),
+                                html.Div(
+                                    [
+                                        html.A(
+                                            [
+                                                html.Img(
+                                                    src='assets/git.png',
+                                                    width='40px',
+                                                    height='40px',
+                                                    id='id_img_git'
+                                                )
+                                            ],
+                                            href='https://github.com/rodrigorocha1'
+                                        ),
+                                        html.A(
+                                            [
+                                                html.Img(
+                                                    src='assets/link.png',
+                                                    width='40px',
+                                                    height='40px'
+                                                )
+                                            ],
+                                            href='https://www.linkedin.com/in/rodrigo-rocha-dados/'
+                                        )
+                                    ],
+                                    id='id_img_contatos'
+                                )
                             ],
                             className='class_coluna_info'
                         )
@@ -150,9 +181,9 @@ app.layout = html.Div(
             [
                 html.H5('Últimos Projetos', id='id_titulo_feed'),
                 dbc.Col(primeiro_cartao, md=3, ),
-                dbc.Col(segundo_cartao, md=3,),
+                dbc.Col(segundo_cartao, md=3, ),
                 dbc.Col(terceiro_cartao, md=3, ),
-                dbc.Col(quarto_cartao, md=3,),
+                dbc.Col(quarto_cartao, md=3, ),
             ],
         )
     ]
