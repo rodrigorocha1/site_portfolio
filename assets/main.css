@@ -9,8 +9,44 @@
 
 #id_navbar_main .navbar-brand {
     color: #FD6C03;
+
+}
+
+#id_navbar_main {
+    border: white;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
 }
 
 .class_coluna_info {
     background-color: #1D1D1D;
+}
+
+.class_cor_fundo {
+    background-color: #1D1D1D;
+}
+
+h4,
+p {
+    background-color: #1D1D1D;
+}
+
+h4 {
+    text-align: center;
+}
+
+p.class_paragrafo {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.class_paragrafo {
+    text-decoration: none;
+    color: white;
+    background-color: #1D1D1D;
+
+}
+
+.id_link {
+    text-align: justify;
 }

@@ -12,7 +12,7 @@ barra_principal = [
             ),
             dbc.NavItem(
                 dbc.NavLink(
-                    'Projetos',
+                    'Galeria de Projetos',
                     className='class_navbar'
                 )
             )
