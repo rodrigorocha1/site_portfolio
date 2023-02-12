@@ -4,6 +4,10 @@
     text-align: justify;
 }
 
+.class_navbar {
+    color: white;
+}
+
 #id_navbar_main {
     border: white;
     border: 1px solid #ddd;
@@ -66,4 +70,22 @@ ul {
 #id_segunda_linha_principal {
     margin-top: 10px;
     background-color: #1E2747;
+}
+
+#id_titulo_feed {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#id_linha_feed {
+    margin-top: 10px;
+}
+
+#id_title_feed {
+    font-size: 20px;
+}
+
+#class_btn_feed {
+
+    margin: 0 auto;
 }
