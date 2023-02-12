@@ -2,6 +2,7 @@ from dash import dcc, html
 from app import *
 import dash_bootstrap_components as dbc
 from componentes.barraprincipal import barra_principal
+from componentes.cartoes_feed import *
 
 content = html.Div(id='id_page_content')
 
@@ -27,7 +28,7 @@ app.layout = html.Div(
                                        id='id_paragrafo_um'),
                                 html.H4('Formação Acadêmica',
                                         className='card-title'),
-                                html.P('Formado em  Análise e Desenvolvimento de Sistemas.'
+                                html.P('Formado em  Análise e Desenvolvimento de Sistemas '
                                        'na Fatec (Faculdade de Tecnologia de Ribeirão Preto), conclusão em 2020.',
                                        className='class_paragrafo',
                                        id='id_paragrafo_dois'),
@@ -39,7 +40,8 @@ app.layout = html.Div(
                                     ' Pertinentes a um Dataset Oriundo da Plataforma de '
                                     ' Dados Abertos do Governo Federal no que Tange as '
                                     ' Reclamações Realizadas Entre os Anos de 2017 e 2018',
-                                    href='http://www.fatecrp.edu.br/WorkTec/edicoes/2020-2/trabalhos/II-Worktec-Rodrigo_Rocha.pdf',
+                                    href='http://www.fatecrp.edu.br/WorkTec/edicoes/2020-2/trabalhos/II-Worktec'
+                                         '-Rodrigo_Rocha.pdf',
                                     className='class_paragrafo',
                                     id='id_link'
                                 )
@@ -63,7 +65,8 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
+                                                            '/python/python-original.svg',
                                                         className='class_lista_imagens',
                                                         alt='Python',
                                                         id='id_img_python'
@@ -74,7 +77,8 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG/Power-BI.png',
+                                                        src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG'
+                                                            '/Power-BI.png',
                                                         alt='Power BI',
                                                         className='class_lista_imagens',
                                                         id='id_img_power_bi'
@@ -85,7 +89,9 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://yt3.ggpht.com/ytc/AMLnZu-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k-c0x00ffffff-no-rj',
+                                                        src='https://yt3.ggpht.com/ytc/AMLnZu'
+                                                            '-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k'
+                                                            '-c0x00ffffff-no-rj',
                                                         alt='Pentaho',
                                                         className='class_lista_imagens',
                                                         id='id_img_pentaho'
@@ -96,7 +102,8 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://www.freeiconspng.com/uploads/sql-server-icon-png-8.png',
+                                                        src='https://www.freeiconspng.com/uploads/sql-server-icon-png'
+                                                            '-8.png',
                                                         alt='sql server',
                                                         className='class_lista_imagens',
                                                         id='id_img_sql_server'
@@ -107,7 +114,8 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
+                                                            '/oracle/oracle-original.svg',
                                                         alt='Oracle',
                                                         className='class_lista_imagens',
                                                         id='id_img_oracle'
@@ -118,7 +126,8 @@ app.layout = html.Div(
                                             html.Li(
                                                 [
                                                     html.Img(
-                                                        src='https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg',
+                                                        src='https://www.vectorlogo.zone/logos/plot_ly/plot_ly'
+                                                            '-official.svg',
                                                         alt='Dash',
                                                         className='class_lista_imagens',
                                                         id='id_img_dash'
@@ -136,6 +145,14 @@ app.layout = html.Div(
                     md=6,
                 )
             ]
+        ),
+        dbc.Row(
+            [
+                html.P('Ultimos Projetos desenvolvidos', id='id_text_feed_projetos'),
+                dbc.Col(primeiro_cartao),
+                dbc.Col(segundo_cartao, ),
+            ],
+            id='id_segunda_linha_principal'
         )
     ]
 )
