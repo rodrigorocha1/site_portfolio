@@ -15,6 +15,7 @@
 
 #id_container {
     color: #1E2747;
+    border: 10px white;
     margin-bottom: 10px;
 }
 
@@ -74,7 +75,8 @@ ul {
 
 #id_titulo_feed {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #id_linha_feed {

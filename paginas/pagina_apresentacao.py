@@ -67,7 +67,8 @@ pagina_apresentacao = [
                                         html.Li(
                                             [
                                                 html.Img(
-                                                    src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG/Power-BI.png',
+                                                    src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG'
+                                                        '/Power-BI.png',
                                                     alt='Power BI',
                                                     className='class_lista_imagens',
                                                     id='id_img_power_bi'
@@ -174,5 +175,6 @@ pagina_apresentacao = [
             dbc.Col(terceiro_cartao, md=3, ),
             dbc.Col(quarto_cartao, md=3, ),
         ],
+        id='id_linha_2'
     )
 ]
