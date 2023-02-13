@@ -8,14 +8,14 @@
     color: white;
 }
 
-#id_navbar_main {
-    border: white;
-    border: 1px solid #ddd;
-    margin-bottom: 30px;
-}
 
 .class_coluna_info {
     background-color: #1E2747
+}
+
+#id_container {
+    color: #1E2747;
+    margin-bottom: 10px;
 }
 
 .class_cor_fundo {

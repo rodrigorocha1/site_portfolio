@@ -1,193 +1,98 @@
-from dash import dcc, html
+from dash import dcc, html, Output, Input, State
+from paginas.pagina_apresentacao import pagina_apresentacao
+from paginas.lista_projetos import lista_projetos
 from app import *
-import dash_bootstrap_components as dbc
-from componentes.barraprincipal import barra_principal
-from componentes.cartoes_feed import *
 
-content = html.Div(id='id_page_content')
+navbar_principal = dbc.Row(
+    [
+        dbc.Nav(
+            children=[
+                dbc.NavItem(
+                    dbc.NavLink(
+                        'Inicio',
+                        href='/paginas/pagina_apresentacao',
+                        id='id_pg_inicio',
+                        style={'color': '#FFFFFF'}
+                    )
+                ),
+                dbc.NavItem(
+                    dbc.NavLink(
+                        'Galeria de Projetos',
+                        href='/paginas/lista_projetos',
+                        id='id_pg_projetos',
+                        style={'color': '#FFFFFF'}
+                    )
+                )
+            ]
+        )
+    ],
+    className='g-0 ms-auto flex-nowrap mt-3 mt-md-0',
+    id='id_nav_main'
+)
 
 app.layout = html.Div(
     [
-        dbc.Row(
-            barra_principal,
-            id='id_linha_principal_um'
-        ),
-        dbc.Row(
-            [
-                dbc.Col(
-                    dbc.Card(
-                        dbc.CardBody(
+        dcc.Location(id='url'),
+        dbc.Navbar(
+            dbc.Container(
+                [
+                    html.A(
+                        dbc.Row(
                             [
-                                html.H4('Sobre Mim',
-                                        className='card-title',
-                                        id='id_title'),
-                                html.P('Hoje trabalho com Pentaho data Integration,'
-                                       ' SQL (Consulta Simples No Banco de dados)'
-                                       ' Consumo de API (REST E SOAP)',
-                                       className='class_paragrafo',
-                                       id='id_paragrafo_um'),
-                                html.H4('Formação Acadêmica',
-                                        className='card-title'),
-                                html.P('Formado em  Análise e Desenvolvimento de Sistemas '
-                                       'na Fatec (Faculdade de Tecnologia de Ribeirão Preto), conclusão em 2020.',
-                                       className='class_paragrafo',
-                                       id='id_paragrafo_dois'),
-                                html.H4('TCC',
-                                        className='card-title'),
-                                html.A(
-                                    'Implementando o Processo de ETL (Extract, Transform And Load) '
-                                    ' Para a Análise de Variáveis '
-                                    ' Pertinentes a um Dataset Oriundo da Plataforma de '
-                                    ' Dados Abertos do Governo Federal no que Tange as '
-                                    ' Reclamações Realizadas Entre os Anos de 2017 e 2018',
-                                    href='http://www.fatecrp.edu.br/WorkTec/edicoes/2020-2/trabalhos/II-Worktec'
-                                         '-Rodrigo_Rocha.pdf',
-                                    className='class_paragrafo',
-                                    id='id_link'
-                                )
+                                dbc.Col(
+                                    dbc.NavbarBrand(
+                                        'Portifolio Rodrigo Silva Rocha',
+                                        className='ms-2',
+                                        style={'color': '#FFFFFF'}
+                                    )
+                                ),
                             ],
-                            className='class_coluna_info'
-                        )
+                            align='center',
+                            className='g-0',
+                        ),
                     ),
-                    md=6,
-                ),
-                dbc.Col(
-                    dbc.Card(
-                        dbc.CardBody(
-                            [
-                                html.H4(
-                                    'Habilidades',
-                                    className='class_cor_fundo'
-                                ),
-                                html.Div(
-                                    html.Ul(
-                                        children=[
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
-                                                            '/python/python-original.svg',
-                                                        className='class_lista_imagens',
-                                                        alt='Python',
-                                                        id='id_img_python'
-                                                    ),
-                                                    ' PYTHON'
-                                                ], id='id_lista_python'
-                                            ),
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://github.com/microsoft/PowerBI-Icons/raw/main/PNG'
-                                                            '/Power-BI.png',
-                                                        alt='Power BI',
-                                                        className='class_lista_imagens',
-                                                        id='id_img_power_bi'
-                                                    ),
-                                                    ' POWER BI'
-                                                ], id='id_lista_power_bi'
-                                            ),
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://yt3.ggpht.com/ytc/AMLnZu'
-                                                            '-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k'
-                                                            '-c0x00ffffff-no-rj',
-                                                        alt='Pentaho',
-                                                        className='class_lista_imagens',
-                                                        id='id_img_pentaho'
-                                                    ),
-                                                    ' PENTAHO'
-                                                ], id='id_lista_pentaho'
-                                            ),
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://www.freeiconspng.com/uploads/sql-server-icon-png'
-                                                            '-8.png',
-                                                        alt='sql server',
-                                                        className='class_lista_imagens',
-                                                        id='id_img_sql_server'
-                                                    ),
-                                                    ' SQL SERVER'
-                                                ], id='id_lista_sql_server'
-                                            ),
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
-                                                            '/oracle/oracle-original.svg',
-                                                        alt='Oracle',
-                                                        className='class_lista_imagens',
-                                                        id='id_img_oracle'
-                                                    ),
-                                                    ' ORACLE'
-                                                ], id='id_lista_oracle_'
-                                            ),
-                                            html.Li(
-                                                [
-                                                    html.Img(
-                                                        src='https://www.vectorlogo.zone/logos/plot_ly/plot_ly'
-                                                            '-official.svg',
-                                                        alt='Dash',
-                                                        className='class_lista_imagens',
-                                                        id='id_img_dash'
-                                                    ),
-                                                    ' DASH'
-                                                ], id='id_lista_dash'
-                                            ),
-                                        ]
-                                    ),
-
-                                ),
-                                html.H4(
-                                    'Contatos',
-                                    className='class_cor_fundo'
-                                ),
-                                html.Div(
-                                    [
-                                        html.A(
-                                            [
-                                                html.Img(
-                                                    src='assets/git.png',
-                                                    width='40px',
-                                                    height='40px',
-                                                    id='id_img_git'
-                                                )
-                                            ],
-                                            href='https://github.com/rodrigorocha1'
-                                        ),
-                                        html.A(
-                                            [
-                                                html.Img(
-                                                    src='assets/link.png',
-                                                    width='40px',
-                                                    height='40px'
-                                                )
-                                            ],
-                                            href='https://www.linkedin.com/in/rodrigo-rocha-dados/'
-                                        )
-                                    ],
-                                    id='id_img_contatos'
-                                )
-                            ],
-                            className='class_coluna_info'
-                        )
+                    dbc.NavbarToggler(
+                        id='navbar-toggler',
+                        n_clicks=0
                     ),
-                    md=6,
-                )
-            ]
+                    dbc.Collapse(
+                        navbar_principal,
+                        id='navbar-collapse',
+                        is_open=False,
+                        navbar=True,
+                    ),
+                ]
+            ),
+            color='#141A32',
+            id='id_container'
         ),
-        dbc.Row(
-            [
-                html.H5('Últimos Projetos', id='id_titulo_feed'),
-                dbc.Col(primeiro_cartao, md=3, ),
-                dbc.Col(segundo_cartao, md=3, ),
-                dbc.Col(terceiro_cartao, md=3, ),
-                dbc.Col(quarto_cartao, md=3, ),
-            ],
-        )
+        html.Div(id='page-content')
     ]
 )
+
+
+@app.callback(
+    Output('navbar-collapse', 'is_open'),
+    [Input('navbar-toggler', 'n_clicks')],
+    [State('navbar-collapse', 'is_open')],
+)
+def toggle_navbar_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open
+
+
+@app.callback(Output('page-content', 'children'),
+              [Input('url', 'pathname')])
+def render_page_content(pathname):
+    print('pathname', pathname)
+    if pathname == '/paginas/pagina_apresentacao' or pathname == '/':
+        return pagina_apresentacao
+    elif pathname == '/paginas/lista_projetos':
+        return lista_projetos
+    else:
+        return '404'
+
 
 if __name__ == '__main__':
     app.run_server(port=8051, debug=True)
