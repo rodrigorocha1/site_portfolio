@@ -1,7 +1,15 @@
 from dash import dcc, html, Output, Input, State
 from paginas.pagina_apresentacao import pagina_apresentacao
 from paginas.lista_projetos import lista_projetos
-from app import *
+import dash
+import dash_bootstrap_components as dbc
+
+
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.config['suppress_callback_exceptions'] = True
+app.scripts.config.serve_locally = True
+server = app.server
+
 
 navbar_principal = dbc.Row(
     [
@@ -63,6 +71,7 @@ app.layout = html.Div(
                     ),
                 ]
             ),
+            style={},
             color='#141A32',
             id='id_container'
         ),
