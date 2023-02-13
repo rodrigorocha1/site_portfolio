@@ -29,7 +29,8 @@ navbar_principal = dbc.Row(
                         style={'color': '#FFFFFF'}
                     )
                 )
-            ]
+            ],
+            id='id_nav_bar'
         )
     ],
     className='g-0 ms-auto flex-nowrap mt-3 mt-md-0',
