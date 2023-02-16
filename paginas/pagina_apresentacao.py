@@ -25,9 +25,9 @@ class PaginaApresentacao:
                     dbc.Col(habilidade.cards_habilidades, md=6)
                 ]
             ),
-            # dbc.Row(
-            #     cartoes_feed.cartoes_feed
-            # )
+            dbc.Row(
+                cartoes_feed.cartoes_feed
+            )
         ]
 
 # pagina_apresentacao = [

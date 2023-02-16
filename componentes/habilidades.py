@@ -6,13 +6,13 @@ class Habilidades:
 
     def __init__(self):
         self.__lista_habilidades = [
-            ('Pentaho ',
+            (' - Pentaho ',
              'https://yt3.ggpht.com/ytc/AMLnZu-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k-c0x00ffffff-no-rj'),
-            ('Sql Server ', 'https://www.freeiconspng.com/uploads/sql-server-icon-png-8.png'),
-            ('Python ', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'),
-            ('Power BI ', 'https://github.com/microsoft/PowerBI-Icons/raw/main/PNG/Power-BI.png'),
-            ('Oracle ', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg'),
-            ('Dash e Plotly ', 'https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg'),
+            (' - Sql Server ', 'https://www.freeiconspng.com/uploads/sql-server-icon-png-8.png'),
+            (' - Python ', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'),
+            (' - Power BI ', 'https://github.com/microsoft/PowerBI-Icons/raw/main/PNG/Power-BI.png'),
+            (' - Oracle ', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg'),
+            (' - Dash e Plotly ', 'https://www.vectorlogo.zone/logos/plot_ly/plot_ly-official.svg'),
         ]
 
         self.__lista_contatos = [
