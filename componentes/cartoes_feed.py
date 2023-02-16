@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 
 class CartoesFeed:
 
-    def __init__(self):
+    def __init__(self): # objeto app
         self.cartoes_feed = self.__gerar_cartoes_feed()
 
     def __gerar_cartoes_feed(self):
