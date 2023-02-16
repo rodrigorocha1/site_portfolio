@@ -14,7 +14,7 @@ class CartoesFeed:
                     html.H4('Pokedex Primeira Versão - Python',
                             className='card-title',
                             id='id_title_feed_pokedex'),
-                    dbc.Button('Clique Aqui',
+                    html.Button('Clique Aqui',
                                className='class_btn_feed',
                                id='id_btn_pokedex')
                 ],
@@ -28,7 +28,7 @@ class CartoesFeed:
                     html.H4('Eleições 2022-Versão Power BI',
                             className='card-title',
                             id='id_title_feed_el_2022'),
-                    dbc.Button('Clique Aqui',
+                    html.Button('Clique Aqui',
                                className='class_btn_feed',
                                id='id_btn_eli')
                 ],
@@ -42,7 +42,7 @@ class CartoesFeed:
                     html.H4('Aplicativo Previsão Tempo',
                             className='card-title',
                             id='id_title_feed_pv'),
-                    dbc.Button('Clique Aqui',
+                    html.Button('Clique Aqui',
                                className='class_btn_feed',
                                id='id_btn_tempo')
                 ],
@@ -56,7 +56,7 @@ class CartoesFeed:
                     html.H4('Sobre Mim',
                             className='card-title',
                             id='id_title_feed'),
-                    dbc.Button('Clique Aqui',
+                    html.Button('Clique Aqui',
                                className='class_btn_feed',
                                id='id_btn_feedd'
                                )
@@ -72,3 +72,5 @@ class CartoesFeed:
             dbc.Col(terceiro_cartao, md=3, ),
             dbc.Col(quarto_cartao, md=3, ),
         ]
+
+
