@@ -1,8 +1,11 @@
 from dash import dcc, html, Output, Input, State
-from paginas.pagina_apresentacao import pagina_apresentacao
+from paginas.pagina_apresentacao import PaginaApresentacao
 from paginas.lista_projetos import lista_projetos
 import dash
 import dash_bootstrap_components as dbc
+from componentes.habilidades import Habilidades
+from componentes.cartoes_feed import CartoesFeed
+from componentes.sobre_min import SobreMim
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.config['suppress_callback_exceptions'] = True
@@ -93,9 +96,12 @@ def toggle_navbar_collapse(n, is_open):
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def render_page_content(pathname):
-    print('pathname', pathname)
     if pathname == '/paginas/pagina_apresentacao' or pathname == '/':
-        return pagina_apresentacao
+        sm = SobreMim()
+        ha = Habilidades()
+        cf = CartoesFeed()
+        pa = PaginaApresentacao(sobre_min=sm, habilidade=ha, cartoes_feed=cf)
+        return pa.pagina_apresentacao
     elif pathname == '/paginas/lista_projetos':
         return lista_projetos
     else:
