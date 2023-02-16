@@ -1,6 +1,6 @@
 from dash import dcc, html, Output, Input, State
 from paginas.pagina_apresentacao import PaginaApresentacao
-from paginas.lista_projetos import lista_projetos
+from paginas.lista_projetos import ListaProjetos
 import dash
 import dash_bootstrap_components as dbc
 from componentes.habilidades import Habilidades
@@ -103,7 +103,8 @@ def render_page_content(pathname):
         pa = PaginaApresentacao(sobre_min=sm, habilidade=ha, cartoes_feed=cf)
         return pa.pagina_apresentacao
     elif pathname == '/paginas/lista_projetos':
-        return lista_projetos
+        lp = ListaProjetos()
+        return lp.layout_lista_projetos
     else:
         return '404'
 

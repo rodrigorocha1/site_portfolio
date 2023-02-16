@@ -39,7 +39,6 @@ class Habilidades:
         ]
 
     def __gerar_card_habilidade(self):
-        print('dentro da gerar_card_habilidade')
         return dbc.Card(
             dbc.CardBody(
                 [
