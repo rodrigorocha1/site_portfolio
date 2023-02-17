@@ -22,7 +22,6 @@ class PaginaPrincipal:
         self.app.scripts.config.serve_locally = True
         self.server = self.app.server
         self.app.layout = self.gerar_layout_principal()
-        self._criar_calbacks()
         self._criar_calback_page()
 
     def gerar_layout_principal(self):
@@ -122,8 +121,6 @@ class PaginaPrincipal:
             Output('page-content', 'children'),
             [Input('url', 'pathname')]
         )(self._render_page_content)
-
-    def _criar_calbacks(self):
         self.app.callback(
             Output('navbar-collapse', 'is_open'),
             [Input('navbar-toggler', 'n_clicks')],
@@ -135,4 +132,3 @@ class PaginaPrincipal:
 if __name__ == '__main__':
     pp = PaginaPrincipal()
     pp.rodar_aplicacao()
-    pp.server
