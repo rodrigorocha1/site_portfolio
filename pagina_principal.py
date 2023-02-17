@@ -119,10 +119,9 @@ class PaginaPrincipal:
         )(self._toggle_navbar_collapse)
 
 
+pp = PaginaPrincipal()
+server = pp.app.server
+pp.app.config['suppress_callback_exceptions'] = True
+pp.app.scripts.config.serve_locally = True
 if __name__ == '__main__':
-    pp = PaginaPrincipal()
-    server = pp.app.server
-    pp.app.config['suppress_callback_exceptions'] = True
-    pp.app.scripts.config.serve_locally = True
     pp.rodar_aplicacao()
-
