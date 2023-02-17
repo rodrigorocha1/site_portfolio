@@ -17,7 +17,6 @@ class PaginaPrincipal:
         self.app.config['suppress_callback_exceptions'] = True
         self.app.scripts.config.serve_locally = True
 
-
     def gerar_layout_principal(self):
         return html.Div(
             [
@@ -123,7 +122,7 @@ class PaginaPrincipal:
         )(self._toggle_navbar_collapse)
 
 
-### Start Página
+# Start Página
 pp = PaginaPrincipal()
 server = pp.app.server
 
