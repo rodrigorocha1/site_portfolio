@@ -68,7 +68,7 @@ class PaginaPrincipal:
         )
 
     def rodar_aplicacao(self):
-        self.app.run(debug=True, port=8044)
+        self.app.run_server(debug=True, port=8044)
 
     def _navibar_principal(self):
         return dbc.Row(
@@ -134,7 +134,6 @@ if __name__ == '__main__':
     pp = PaginaPrincipal()
     server = pp.server
     pp.rodar_aplicacao()
-
 
 
 
