@@ -132,4 +132,4 @@ class PaginaPrincipal:
 if __name__ == '__main__':
     pp = PaginaPrincipal()
     pp.rodar_aplicacao()
-    pp.server
+
