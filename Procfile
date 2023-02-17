@@ -1,3 +1,3 @@
-web: python pagina_principal.py
+web: gunicorn pagina_principal:server
 
 
