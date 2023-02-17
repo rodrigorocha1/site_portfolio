@@ -122,7 +122,6 @@ class PaginaPrincipal:
 
 if __name__ == '__main__':
     pp = PaginaPrincipal()
-
     pp.app.config['suppress_callback_exceptions'] = True
     pp.app.scripts.config.serve_locally = True
     pp.rodar_aplicacao()
