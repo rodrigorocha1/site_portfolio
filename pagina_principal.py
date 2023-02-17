@@ -1,4 +1,4 @@
-from dash import dcc, html, Output, Input, State
+from dash import dcc, html, Output, Input, State, Dash
 from paginas.pagina_apresentacao import PaginaApresentacao
 from paginas.lista_projetos import ListaProjetos
 import dash
@@ -17,13 +17,12 @@ from componentes.sobre_min import SobreMim
 class PaginaPrincipal:
 
     def __init__(self):
-        self.app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+        self.app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
         self.server = self.app.server
         self.app.config['suppress_callback_exceptions'] = True
         self.app.scripts.config.serve_locally = True
         self.app.layout = self.gerar_layout_principal()
         self._criar_calback_page()
-
 
     def gerar_layout_principal(self):
         return html.Div(
@@ -134,6 +133,3 @@ if __name__ == '__main__':
     pp = PaginaPrincipal()
     server = pp.server
     pp.rodar_aplicacao()
-
-
-
