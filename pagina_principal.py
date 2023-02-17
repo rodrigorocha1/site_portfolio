@@ -11,9 +11,7 @@ class PaginaPrincipal:
 
     def __init__(self):
         self.app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-        self.server = self.app.server
-        self.app.config['suppress_callback_exceptions'] = True
-        self.app.scripts.config.serve_locally = True
+
         self.app.layout = self.gerar_layout_principal()
         self._criar_calback_page()
 
@@ -124,5 +122,8 @@ class PaginaPrincipal:
 
 if __name__ == '__main__':
     pp = PaginaPrincipal()
-    server = pp.server
+
+    pp.app.config['suppress_callback_exceptions'] = True
+    pp.app.scripts.config.serve_locally = True
     pp.rodar_aplicacao()
+    server = pp.app.server
