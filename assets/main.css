@@ -1,21 +1,22 @@
-* {
-    background-color: #141A32;
+html {
+    background: #141A32;
     color: white;
     text-align: justify;
 }
 
 .class_navbar {
     color: white;
+    background-color: #1E2747
 }
 
 
 .class_coluna_info {
     background-color: #1E2747
+
 }
 
 #id_container {
-    color: #1E2747;
-    color: #FFFFFF;
+    background: #141A32;
     border: 2px solid white;
     margin-botom: 10px;
     border-radius: 20px;
@@ -24,6 +25,7 @@
 
 .class_cor_fundo {
     background-color: #1E2747;
+    color: white;
 }
 
 h4,
@@ -33,6 +35,7 @@ p {
 
 h4 {
     text-align: center;
+    color: white;
 }
 
 p.class_paragrafo {
@@ -55,6 +58,7 @@ li,
 ul {
     background-color: #1E2747;
     margin-top: 10px;
+    color: white;
 }
 
 .class_lista_imagens {
@@ -69,10 +73,12 @@ ul {
 
 #id_text_feed_projetos {
     text-align: center;
+    background-color: #1E2747
 }
 
 #id_segunda_linha_principal {
     margin-top: 10px;
+    background-color: #1E2747
 
 }
 
@@ -80,14 +86,17 @@ ul {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-color: #1E2747
 }
 
 #id_linha_feed {
     margin-top: 10px;
 }
 
+
 #id_title_feed {
     font-size: 15px;
+    color: white;
 }
 
 #id_img_contatos {
@@ -103,4 +112,13 @@ ul {
 
 #id_nav_bar {
     border: 10px white;
+
+}
+
+#page-content {
+    background-color: #141A32;
+}
+
+#id_main_div {
+    background-color: #141A32;
 }

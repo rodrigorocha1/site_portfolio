@@ -56,7 +56,7 @@ class PaginaPrincipal:
                     id='id_container'
                 ),
                 html.Div(id='page-content')
-            ]
+            ], id='id_main_div'
         )
 
     def rodar_aplicacao(self):
