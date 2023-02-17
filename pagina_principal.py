@@ -24,7 +24,6 @@ class PaginaPrincipal:
         self.app.layout = self.gerar_layout_principal()
         self._criar_calback_page()
 
-
     def gerar_layout_principal(self):
         return html.Div(
             [
@@ -130,10 +129,6 @@ class PaginaPrincipal:
         )(self._toggle_navbar_collapse)
 
 
-if __name__ == '__main__':
-    pp = PaginaPrincipal()
-    pp.rodar_aplicacao()
-    server = pp.server
-
-
-
+pp = PaginaPrincipal()
+pp.rodar_aplicacao()
+server = pp.server
