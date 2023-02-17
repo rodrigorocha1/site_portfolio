@@ -13,6 +13,10 @@ class PaginaPrincipal:
         self.app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
         self.app.layout = self.gerar_layout_principal()
         self._criar_calback_page()
+        self.app.title = 'Apresentação'
+        self.app.config['suppress_callback_exceptions'] = True
+        self.app.scripts.config.serve_locally = True
+
 
     def gerar_layout_principal(self):
         return html.Div(
@@ -119,9 +123,4 @@ class PaginaPrincipal:
         )(self._toggle_navbar_collapse)
 
 
-pp = PaginaPrincipal()
-server = pp.app.server
-pp.app.config['suppress_callback_exceptions'] = True
-pp.app.scripts.config.serve_locally = True
-if __name__ == '__main__':
-    pp.rodar_aplicacao()
+### Start Página
