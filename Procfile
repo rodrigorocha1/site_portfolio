@@ -1,3 +1,3 @@
-web: gunicorn pagina_principal:PaginaPrincipal.server
+web: gunicorn pagina_principal:PaginaPrincipal.app.server
 
 
