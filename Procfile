@@ -1,3 +1,3 @@
-web: gunicorn pagina_principal:pp.server
+web: gunicorn pagina_principal:pp.rodar_aplicacao()
 
 
