@@ -33,11 +33,7 @@ class CartoesFeed:
                                 className='card-title',
                                 id=f'{id_h4}'
                             ),
-                            html.Button(
-                                nm_botao,
-                                className='class_btn_feed',
-                                id=f'{id_btn}'
-                            ),
+                            dbc.CardLink('external link')
                         ],
                         className='class_coluna_info'
                     )
