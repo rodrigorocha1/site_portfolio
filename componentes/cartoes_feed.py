@@ -4,73 +4,33 @@ import dash_bootstrap_components as dbc
 
 class CartoesFeed:
 
-    def __init__(self): # objeto app
-        self.cartoes_feed = self.__gerar_cartoes_feed()
+    def __init__(self):  # objeto app
+        self._legendas = [
+            ('Pokedex Primeira Versão - Python', 'id_title_feed_pokedex', 'Clique Aqui', 'id_btn_pokedex'),
+            ('Eleições 2022-Versão Power BI', 'id_title_feed_el_2022', 'Clique Aqui', 'id_btn_eli'),
+            ('Aplicativo Previsão Tempo', 'id_title_feed_pv', 'Clique Aqui', 'id_btn_tempo'),
+            ('Sobre Mim', 'id_title_feed', 'Clique Aqui', 'id_btn_feedd')
+        ]
+        self.cartoes_feed = self._gerar_layout_feed()
 
-    def __gerar_cartoes_feed(self):
-        primeiro_cartao = dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H4('Pokedex Primeira Versão - Python',
-                            className='card-title',
-                            id='id_title_feed_pokedex'),
-                    html.Button('Clique Aqui',
-                               className='class_btn_feed',
-                               id='id_btn_pokedex')
-                ],
-                className='class_coluna_info'
+    def _gerar_layout_feed(self):
+        cartoes = []
+        for nm_h4, id_h4, nm_botao, id_btn in self._legendas:
+            cartao = dbc.Card(
+                dbc.CardBody(
+                    [
+                        html.H4(nm_h4,
+                                className='card-title',
+                                id=f'{id_h4}'),
+                        html.Button(nm_botao,
+                                    className='class_btn_feed',
+                                    id=f'{id_btn}')
+                    ],
+                    className='class_coluna_info'
+                )
             )
-        )
-
-        segundo_cartao = dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H4('Eleições 2022-Versão Power BI',
-                            className='card-title',
-                            id='id_title_feed_el_2022'),
-                    html.Button('Clique Aqui',
-                               className='class_btn_feed',
-                               id='id_btn_eli')
-                ],
-                className='class_coluna_info'
-            )
-        )
-
-        terceiro_cartao = dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H4('Aplicativo Previsão Tempo',
-                            className='card-title',
-                            id='id_title_feed_pv'),
-                    html.Button('Clique Aqui',
-                               className='class_btn_feed',
-                               id='id_btn_tempo')
-                ],
-                className='class_coluna_info'
-            )
-        )
-
-        quarto_cartao = dbc.Card(
-            dbc.CardBody(
-                [
-                    html.H4('Sobre Mim',
-                            className='card-title',
-                            id='id_title_feed'),
-                    html.Button('Clique Aqui',
-                               className='class_btn_feed',
-                               id='id_btn_feedd'
-                               )
-                ],
-                className='class_coluna_info'
-            )
-        )
-
+            cartoes.append(dbc.Col(cartao, md=3))
         return [
             html.H5('Últimos Projetos', id='id_titulo_feed'),
-            dbc.Col(primeiro_cartao, md=3, ),
-            dbc.Col(segundo_cartao, md=3, ),
-            dbc.Col(terceiro_cartao, md=3, ),
-            dbc.Col(quarto_cartao, md=3, ),
+            *cartoes
         ]
-
-
