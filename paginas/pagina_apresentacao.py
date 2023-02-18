@@ -14,7 +14,6 @@ class PaginaApresentacao:
             self.__sobre_min,
             self.__habilidade,
             self.__cartoes_feed
-
         )
 
     def __gerar_pagina_apresentacao(self, sobre_min: SobreMim, habilidade: Habilidades, cartoes_feed: CartoesFeed):
