@@ -17,35 +17,34 @@ class CartoesFeed:
         self.cartoes_feed = self._gerar_layout_feed()
 
     def _gerar_layout_feed(self):
+
         """
             Gera o layout com os projetos
         @return: Uma coluna com cartões
         """
-        cartoes = []
-        for nm_h4, id_h4, nm_botao, id_btn in self._legendas:
-            cartao = dbc.Card(
-                dbc.CardBody(
-                    [
-                        html.H4(
-                            nm_h4,
-                            className='card-title',
-                            id=f'{id_h4}'
-                        ),
-                        html.Button(
-                            nm_botao,
-                            className='class_btn_feed',
-                            id=f'{id_btn}'
-                        )
-                    ],
-                    className='class_coluna_info'
-                )
-            )
-            cartoes.append(
-                dbc.Col(
-                    cartao,
-                    md=3
-                )
-            )
+
+        cartoes = [
+            dbc.Col(
+                dbc.Card(
+                    dbc.CardBody(
+                        [
+                            html.H4(
+                                nm_h4,
+                                className='card-title',
+                                id=f'{id_h4}'
+                            ),
+                            html.Button(
+                                nm_botao,
+                                className='class_btn_feed',
+                                id=f'{id_btn}'
+                            ),
+                        ],
+                        className='class_coluna_info'
+                    )
+                ),
+                md=3
+            ) for nm_h4, id_h4, nm_botao, id_btn in self._legendas
+        ]
         return [
             html.H5('Últimos Projetos', id='id_titulo_feed'),
             *cartoes
