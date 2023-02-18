@@ -17,7 +17,6 @@ class CartoesFeed:
         self.cartoes_feed = self._gerar_layout_feed()
 
     def _gerar_layout_feed(self):
-
         """
             Gera o layout com os projetos
         @return: Uma coluna com cartões
@@ -33,7 +32,10 @@ class CartoesFeed:
                                 className='card-title',
                                 id=f'{id_h4}'
                             ),
-                            dbc.CardLink('external link', className='class-link-externo')
+                            dbc.CardLink(
+                                'external link',
+                                className='class-link-externo'
+                            )
                         ],
                         className='class_coluna_info'
                     )

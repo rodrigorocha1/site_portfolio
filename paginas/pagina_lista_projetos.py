@@ -1,4 +1,4 @@
-from dash import html, dcc
+from dash import html, dcc, Dash
 import dash_bootstrap_components as dbc
 
 
@@ -8,6 +8,7 @@ class PaginaListaProjetos:
         """
             Construtor com os parámetros
         """
+
         self._legendas_projetos = [
             ('', 'id_img2', 'Titulo', 'id_titulo2', 'desc', 'id_desc2', 'link', 'id_link_2'),
             ('', 'id_img3', 'Titulo', 'id_titulo3', 'desc', 'id_desc3', 'link', 'id_link_3'),
@@ -17,6 +18,7 @@ class PaginaListaProjetos:
             ('', 'id_img7', 'Titulo', 'id_titulo7', 'desc', 'id_desc7', 'link', 'id_link_7'),
             ('', 'id_img8', 'Titulo', 'id_titulo8', 'desc', 'id_desc8', 'link', 'id_link_8'),
         ]
+
         self.layout_lista_projetos = self._gerar_lista_projetos()
 
     def _gerar_lista_projetos(self):
@@ -46,7 +48,13 @@ class PaginaListaProjetos:
                                         id=id_desc,
                                         className='card_text',
                                     ),
-                                    dbc.CardLink("External link", href='../paginas/projetos/pokedex_primeira_versao'),
+                                    dbc.CardLink(
+                                        html.P(
+                                            'Link Externo',
+                                            className='class-p-link'
+                                        ),
+                                        href='../paginas/projetos/pokedex_primeira_versao'
+                                    ),
                                 ]
                             )
                         ], className='class_coluna_info'
