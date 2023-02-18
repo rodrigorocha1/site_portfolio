@@ -5,6 +5,9 @@ import dash_bootstrap_components as dbc
 class PaginaListaProjetos:
 
     def __init__(self):
+        """
+            Construtor com os parámetros
+        """
         self._legendas_projetos = [
             ('', 'id_img1', 'Titulo', 'id_titulo1', 'desc', 'id_desc1', 'link', 'id_link_1'),
             ('', 'id_img2', 'Titulo', 'id_titulo2', 'desc', 'id_desc2', 'link', 'id_link_2'),
@@ -18,6 +21,10 @@ class PaginaListaProjetos:
         self.layout_lista_projetos = self._gerar_lista_projetos()
 
     def _gerar_lista_projetos(self):
+        """
+        Método para gerar a lista de cartões para a galeria
+        @return: uma linha com cartões
+        """
         cartoes_projeto = []
         for caminho_img, id_img, titulo_cartao, id_titulo, desc, id_desc, link, id_link in self._legendas_projetos:
             card_lista_projeto = \
