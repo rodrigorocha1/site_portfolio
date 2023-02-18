@@ -3,6 +3,9 @@ html {
     color: white;
     text-align: justify;
 }
+p {
+    color: white;
+}
 
 .class_navbar {
     color: white;

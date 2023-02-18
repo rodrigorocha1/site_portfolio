@@ -1,6 +1,6 @@
 from dash import dcc, html, Output, Input, State, Dash
 from paginas.pagina_apresentacao import PaginaApresentacao
-from paginas.lista_projetos import PaginaListaProjetos
+from paginas.pagina_lista_projetos import PaginaListaProjetos
 import dash_bootstrap_components as dbc
 from componentes.habilidades import Habilidades
 from componentes.cartoes_feed import CartoesFeed

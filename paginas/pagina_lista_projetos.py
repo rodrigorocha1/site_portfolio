@@ -9,7 +9,9 @@ class PaginaListaProjetos:
             Construtor com os parámetros
         """
         self._legendas_projetos = [
-            ('', 'id_img1', 'Titulo', 'id_titulo1', 'desc', 'id_desc1', 'link', 'id_link_1'),
+            ('', 'id_img1', 'Pokedex Primeira Versão', 'id_pokedex_primeira_versao',
+             'Pokedex V1 feita, sem controle de repetição de código', 'id_desc_pokedex', 'link',
+             'id_link_pokedex'),
             ('', 'id_img2', 'Titulo', 'id_titulo2', 'desc', 'id_desc2', 'link', 'id_link_2'),
             ('', 'id_img3', 'Titulo', 'id_titulo3', 'desc', 'id_desc3', 'link', 'id_link_3'),
             ('', 'id_img4', 'Titulo', 'id_titulo4', 'desc', 'id_desc4', 'link', 'id_link_4'),
