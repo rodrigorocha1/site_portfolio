@@ -39,6 +39,7 @@ class PaginaApresentacao:
                 ]
             ),
             dbc.Row(
-                cartoes_feed.cartoes_feed
+                cartoes_feed.cartoes_feed,
+                id='id_linhas_feed'
             )
         ]

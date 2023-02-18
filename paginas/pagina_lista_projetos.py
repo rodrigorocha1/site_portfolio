@@ -56,13 +56,11 @@ class PaginaListaProjetos:
                     ], className='class_coluna_info'
                 )
             cartoes_projeto.append(
-
                 dbc.Col(
                     card_lista_projeto,
                     md=3,
                     className='class_card_projeto'
                 ),
-
             )
         return html.Div(
             [
