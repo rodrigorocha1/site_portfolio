@@ -14,7 +14,7 @@ p {
 
 
 .class_coluna_info {
-    background-color: #1E2747
+    background-color: #1E2747;
 
 }
 
@@ -135,4 +135,5 @@ ul {
 .class_linha_projeto {
     margin-left: 20px;
     margin-right: 20px;
+
 }
