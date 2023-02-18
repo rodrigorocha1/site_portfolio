@@ -5,6 +5,9 @@ import dash_bootstrap_components as dbc
 class Habilidades:
 
     def __init__(self):
+        """
+
+        """
         self.__lista_habilidades = [
             (' - Pentaho ',
              'https://yt3.ggpht.com/ytc/AMLnZu-zHYbfICJDEel0ighDFOcAN4KklMhvHzwaLlbg=s900-c-k-c0x00ffffff-no-rj'),
@@ -23,6 +26,9 @@ class Habilidades:
         self.cards_habilidades = self.__gerar_card_habilidade()
 
     def __gerar_lista_apresentacao(self):
+        """
+            Método para gera a lista de apresentação
+        """
         return [
             html.Li(
                 [
@@ -39,6 +45,9 @@ class Habilidades:
         ]
 
     def __gerar_card_habilidade(self):
+        """
+            Método para gerar os cards com habilidades
+        """
         return dbc.Card(
             dbc.CardBody(
                 [

@@ -10,6 +10,9 @@ from componentes.sobre_min import SobreMim
 class PaginaPrincipal:
 
     def __init__(self):
+        """
+            Parâmetros para iniciar o layout
+        """
         self.app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
         self.app.layout = self.gerar_layout_principal()
         self._criar_calback_page()
@@ -18,7 +21,10 @@ class PaginaPrincipal:
         self.app.scripts.config.serve_locally = True
 
     def gerar_layout_principal(self):
-        return html.Div(
+        """
+            Método para gerar o navbar
+        """
+        navbar = html.Div(
             [
                 dcc.Location(id='url'),
                 dbc.Navbar(
@@ -59,10 +65,18 @@ class PaginaPrincipal:
             ], id='id_main_div'
         )
 
+        return navbar
+
     def rodar_aplicacao(self):
+        """
+            Método para rodar aplicação
+        """
         self.app.run_server(debug=True, port=8044)
 
     def _navibar_principal(self):
+        """
+            Método para gerar o navbar e navegações
+        """
         return dbc.Row(
             [
                 dbc.Nav(
@@ -92,11 +106,22 @@ class PaginaPrincipal:
         )
 
     def _toggle_navbar_collapse(self, n, is_open):
+        """
+            Método para colapsar a navbar
+        @param n:
+        @param is_open: aberto
+        @return:
+        """
         if n:
             return not is_open
         return is_open
 
     def _render_page_content(self, pathname):
+        """
+        Método para a troca da página
+        @param pathname: recebe o id tab
+        @return: a página gerada
+        """
         if pathname == '/paginas/pagina_apresentacao' or pathname == '/':
             sm = SobreMim()
             ha = Habilidades()
@@ -110,6 +135,9 @@ class PaginaPrincipal:
             return '404'
 
     def _criar_calback_page(self):
+        """
+            Método para criar os calbacks e suas funções
+        """
         self.app.callback(
             Output('page-content', 'children'),
             [Input('url', 'pathname')]

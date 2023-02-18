@@ -6,6 +6,13 @@ import dash_bootstrap_components as dbc
 
 class PaginaApresentacao:
     def __init__(self, sobre_min: SobreMim, habilidade: Habilidades, cartoes_feed: CartoesFeed):
+        """
+            Construtor da página de apresentação
+        @param sobre_min: Objeto sobre mim
+        @param habilidade: Objeto Habilidades mim
+        @param cartoes_feed: Objeto Cartões Feeed
+        """
+
         self.__cartoes_feed = cartoes_feed
         self.__habilidade = habilidade
         self.__sobre_min = sobre_min
@@ -17,6 +24,13 @@ class PaginaApresentacao:
         )
 
     def __gerar_pagina_apresentacao(self, sobre_min: SobreMim, habilidade: Habilidades, cartoes_feed: CartoesFeed):
+        """
+            Método para gerar a página de apresentação
+        @param sobre_min: Objeto sobre mim
+        @param habilidade: Objeto habilidades
+        @param cartoes_feed: Objeto Cartões feed
+        @return: uma linha com informações e habilidades e outra com o cartão feed
+        """
         return [
             dbc.Row(
                 [
@@ -28,4 +42,3 @@ class PaginaApresentacao:
                 cartoes_feed.cartoes_feed
             )
         ]
-

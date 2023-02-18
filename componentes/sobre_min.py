@@ -7,6 +7,10 @@ class SobreMim:
         self.layout_sobre_mim = self.__gerar_layout_sobre_min()
 
     def __gerar_layout_sobre_min(self):
+        """
+            Layout fixo sobre mib
+        @return: um card com as informações
+        """
         return dbc.Card(
             dbc.CardBody(
                 [
