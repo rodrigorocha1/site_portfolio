@@ -33,7 +33,7 @@ class CartoesFeed:
                                 className='card-title',
                                 id=f'{id_h4}'
                             ),
-                            dbc.CardLink('external link')
+                            dbc.CardLink('external link', className='class-link-externo')
                         ],
                         className='class_coluna_info'
                     )

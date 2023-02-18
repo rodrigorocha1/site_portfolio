@@ -142,3 +142,8 @@ ul {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.class-p-link {
+    text-align: center;
+    color: blue;
+}
