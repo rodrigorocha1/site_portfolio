@@ -3,6 +3,7 @@ html {
     color: white;
     text-align: justify;
 }
+
 p {
     color: white;
 }
@@ -133,6 +134,11 @@ ul {
 }
 
 .class_linha_projeto {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#id_linhas_feed {
     margin-left: 20px;
     margin-right: 20px;
 }
