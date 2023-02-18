@@ -43,7 +43,7 @@ class CartoesFeed:
             cartoes.append(
                 dbc.Col(
                     cartao,
-                    md=3
+                    md=2
                 )
             )
         return [

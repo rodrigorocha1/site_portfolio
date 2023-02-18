@@ -123,3 +123,13 @@ ul {
 #id_main_div {
     background-color: #141A32;
 }
+
+.class_card_projeto {
+    margin-top: 20px;
+    background-color: #141A32;
+}
+
+.class_linha_projeto {
+    margin-left: 20px;
+    margin-right: 20px;
+}
