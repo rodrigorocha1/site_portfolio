@@ -40,7 +40,12 @@ class CartoesFeed:
                     className='class_coluna_info'
                 )
             )
-            cartoes.append(dbc.Col(cartao, md=3))
+            cartoes.append(
+                dbc.Col(
+                    cartao,
+                    md=3
+                )
+            )
         return [
             html.H5('Últimos Projetos', id='id_titulo_feed'),
             *cartoes
